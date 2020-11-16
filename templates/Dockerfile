@@ -20,8 +20,7 @@ RUN pip --version
 RUN pip install awscli --upgrade --user
 
 ENV PATH=~/.local/bin:$PATH
-ADD templates /usr/local/bin/templates
-
+ADD . /usr/local/bin/templates
 RUN mkdir ~/.aws && touch ~/.aws/credentials
 
 
